@@ -8,6 +8,7 @@ const Core = require("@slimio/core");
 async function main() {
     const core = new Core(__dirname);
     await core.initialize();
+    console.log("SlimIO Agent started!");
 
     // Handle exit signal!
     process.on("SIGINT", async() => {
