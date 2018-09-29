@@ -4,7 +4,7 @@
     "description": "SlimIO Agent",
     "main": "index.js",
     "dependencies": {
-        "@slimio/core": "0.0.1"
+        "@slimio/core": "^0.1.0"
     },
     "devDependencies": {
         "@escommunity/minami": "^1.0.0",
