@@ -1,3 +1,4 @@
+process.title = "SlimIO";
 const Core = require("@slimio/core");
 
 /**
