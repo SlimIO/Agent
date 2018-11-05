@@ -4,15 +4,16 @@
     "description": "SlimIO Agent",
     "main": "index.js",
     "dependencies": {
-        "@slimio/core": "^0.4.0"
+        "@slimio/core": "^0.4.0",
+        "v8-compile-cache": "^2.0.2"
     },
     "devDependencies": {
         "@escommunity/minami": "^1.0.0",
         "@slimio/eslint-config": "^1.1.8",
-        "@types/es6-shim": "^0.31.37",
-        "@types/node": "^10.11.7",
+        "@types/es6-shim": "^0.31.38",
+        "@types/node": "^10.12.2",
         "ava": "^0.25.0",
-        "eslint": "^5.7.0",
+        "eslint": "^5.8.0",
         "nyc": "^13.1.0"
     },
     "scripts": {

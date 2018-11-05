@@ -1,3 +1,5 @@
+require("v8-compile-cache");
+
 process.title = "SlimIO";
 const Core = require("@slimio/core");
 
@@ -11,6 +13,9 @@ async function main() {
     const core = await (new Core(__dirname)).initialize();
     console.timeEnd("start_core");
     console.log("SlimIO Agent started!");
+
+    await core.exit();
+    process.exit(0);
 
     // Handle exit signal!
     process.on("SIGINT", () => {
