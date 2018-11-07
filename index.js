@@ -14,9 +14,6 @@ async function main() {
     console.timeEnd("start_core");
     console.log("SlimIO Agent started!");
 
-    await core.exit();
-    process.exit(0);
-
     // Handle exit signal!
     process.on("SIGINT", () => {
         console.error("Exiting SlimIO Agent (please wait)");
