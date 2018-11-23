@@ -10,7 +10,7 @@ const Core = require("@slimio/core");
  */
 async function main() {
     console.time("start_core");
-    const core = await (new Core(__dirname)).initialize();
+    const core = await (new Core(__dirname, { silent: true })).initialize();
     console.timeEnd("start_core");
     console.log("SlimIO Agent started!");
 
