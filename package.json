@@ -12,6 +12,7 @@
         }
     },
     "dependencies": {
+        "@slimio/arg-parser": "^0.1.0",
         "@slimio/core": "^0.6.0",
         "v8-compile-cache": "^2.0.2"
     },
