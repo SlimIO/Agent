@@ -2,13 +2,13 @@ require("v8-compile-cache");
 
 process.title = "SlimIO";
 const Core = require("@slimio/core");
-const ArgParser = require("@slimio/arg-parser");
+const { parseArg, argDefinition } = require("@slimio/arg-parser");
 
 // Retrieve argv
-const argv = new ArgParser("v0.1.0", "SlimIO Agent CLI")
-    .addCommand("--silent", "Enable silent mode")
-    .addCommand("-a --autoreload [number=500]", "Configuration Autoreload delay")
-    .parse();
+const argv = parseArg([
+    argDefinition("--silent", "Enable silent mode"),
+    argDefinition("-a --autoreload [number=500]", "Configuration Autoreload delay")
+]);
 
 /**
  * @async
