@@ -56,15 +56,15 @@ Get back at the root of the project and edit `agent.json`
 
 Then, (re)start the agent and events will be loaded !
 
-## Commands
+## CLI Options
 
 - all commands start with `--`
 - all shorcut start with `-`
 ```bash
-npm run --silent -a 1000
+node index --silent -a 1000
 ```
 
-| name | -shorcut | Default | description |
+| name | shorcut | Default | description |
 | --- | --- | --- | --- |
-| silent | file | false | Enable silent mode |
-| autoreload | a | 500 | Configuration Autoreload delay |
+| silent | none | false | Enable silent mode |
+| autoreload | `-a` | 500 | Configuration Autoreload delay |
