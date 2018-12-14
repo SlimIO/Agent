@@ -39,8 +39,8 @@
         "type": "git",
         "url": "git+https://github.com/SlimIO/Agent.git"
     },
-    "keywords": [],
-    "author": "",
+    "keywords": ["SlimIO", "Monitoring", "Agent"],
+    "author": "SlimIO",
     "license": "MIT",
     "bugs": {
         "url": "https://github.com/SlimIO/Agent/issues"
