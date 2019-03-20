@@ -1,5 +1,3 @@
-require("v8-compile-cache");
-
 process.title = "SlimIO";
 const Core = require("@slimio/core");
 const { parseArg, argDefinition } = require("@slimio/arg-parser");
