@@ -8,6 +8,10 @@ An Agent is the result of the addition of a Core and several Addons called "buil
 - [SlimIO Core](https://github.com/SlimIO/Core)
 - [SlimIO Addon](https://github.com/SlimIO/Addon)
 
+
+## Requirements
+- Node.js v10 or higher
+
 ## Getting Started
 To create a new agent, follow these steps (commands):
 
@@ -68,3 +72,7 @@ node index --silent -a 1000
 | --- | --- | --- | --- |
 | silent | none | false | Enable silent mode |
 | autoreload | `-a` | 500 | Configuration Autoreload delay |
+
+
+## License
+MIT
