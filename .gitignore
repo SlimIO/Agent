@@ -60,6 +60,10 @@ typings/
 # next.js build output
 .next
 
+# doc
+jsdoc/
+docs/
+
 agent.json
 addons/*
 debug/
