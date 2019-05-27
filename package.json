@@ -21,6 +21,7 @@
         "@slimio/eslint-config": "^2.0.4",
         "@types/es6-shim": "^0.31.39",
         "@types/node": "^11.13.0",
+        "dotenv": "^8.0.0",
         "eslint": "^5.16.0",
         "husky": "^2.3.0"
     },
