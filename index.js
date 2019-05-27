@@ -1,8 +1,10 @@
 process.title = "SlimIO";
+
+// Require Third-party Dependencies
 const Core = require("@slimio/core");
 const { parseArg, argDefinition } = require("@slimio/arg-parser");
 
-// Retrieve argv
+/** @type {ArgParser.ArgvResult<Agent.Argv>} */
 const argv = parseArg([
     argDefinition("--silent", "Enable silent mode"),
     argDefinition("-a --autoreload [number=500]", "Configuration Autoreload delay")
