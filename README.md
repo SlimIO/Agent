@@ -73,6 +73,12 @@ node index --silent -a 1000
 | silent | none | false | Enable silent mode |
 | autoreload | `-a` | 500 | Configuration Autoreload delay |
 
+## Dependencies
+
+|Name|Refactoring|Security Risk|Usage|
+|---|---|---|---|
+|[@slimio/arg-parser](https://github.com/SlimIO/ArgParser#readme)|Minor|Medium|Command Line parser|
+|[@slimio/core](https://github.com/SlimIO/Core#readme)|⚠️Major|High|SlimIO Core|
 
 ## License
 MIT
