@@ -67,3 +67,5 @@ docs/
 agent.json
 addons/*
 debug/
+daemon/
+build/
