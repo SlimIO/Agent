@@ -13,7 +13,7 @@
     },
     "dependencies": {
         "@slimio/arg-parser": "^0.3.2",
-        "@slimio/core": "^0.7.2"
+        "@slimio/core": "^0.7.3"
     },
     "devDependencies": {
         "@commitlint/cli": "^8.0.0",
