@@ -69,3 +69,4 @@ addons/*
 debug/
 daemon/
 build/
+archives/
