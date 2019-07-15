@@ -1,4 +1,9 @@
+"use strict";
+
 process.title = "SlimIO";
+
+// Require Node.js Dependencies
+const { performance } = require("perf_hooks");
 
 // Require Third-party Dependencies
 const Core = require("@slimio/core");
@@ -16,17 +21,17 @@ const argv = parseArg([
  * @returns {Promise<void>}
  */
 async function main() {
-    console.time("start_core");
+    const startTime = performance.now();
     const core = await (new Core(__dirname, {
         silent: argv.get("silent"),
         autoReload: argv.get("autoreload")
     })).initialize();
-    console.timeEnd("start_core");
-    console.log("SlimIO Agent started!");
+    const end = (startTime - performance.now()).toFixed(2);
+    core.logger.writeLine(`SlimIO Agent started in ${end}ms`);
 
     // Handle exit signal!
     process.on("SIGINT", () => {
-        console.error("Exiting SlimIO Agent (please wait)");
+        core.logger.writeLine("Exiting SlimIO Agent (please wait)");
         core.exit().then(() => {
             setImmediate(process.exit);
         }).catch(function mainErrorHandler(error) {
