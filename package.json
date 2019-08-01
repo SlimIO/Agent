@@ -41,9 +41,7 @@
     ],
     "files": [
         "index.js",
-        "index.d.ts",
-        ".eslintignore",
-        "slimio.toml"
+        "index.d.ts"
     ],
     "author": "SlimIO",
     "license": "MIT",
