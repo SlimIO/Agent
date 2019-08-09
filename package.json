@@ -23,7 +23,7 @@
         "@types/node": "^12.7.1",
         "dotenv": "^8.0.0",
         "eslint": "^6.1.0",
-        "husky": "^3.0.0"
+        "husky": "^3.0.3"
     },
     "scripts": {
         "start": "node index.js",
