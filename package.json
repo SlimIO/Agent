@@ -18,7 +18,7 @@
     "devDependencies": {
         "@commitlint/cli": "^8.1.0",
         "@commitlint/config-conventional": "^8.1.0",
-        "@slimio/eslint-config": "^3.0.2",
+        "@slimio/eslint-config": "^3.0.3",
         "@types/es6-shim": "^0.31.39",
         "@types/node": "^12.7.1",
         "dotenv": "^8.1.0",
