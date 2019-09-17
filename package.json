@@ -16,14 +16,14 @@
         "@slimio/core": "^0.9.1"
     },
     "devDependencies": {
-        "@commitlint/cli": "^8.1.0",
-        "@commitlint/config-conventional": "^8.1.0",
+        "@commitlint/cli": "^8.2.0",
+        "@commitlint/config-conventional": "^8.2.0",
         "@slimio/eslint-config": "^3.0.3",
         "@types/es6-shim": "^0.31.39",
-        "@types/node": "^12.7.1",
+        "@types/node": "^12.7.5",
         "dotenv": "^8.1.0",
-        "eslint": "^6.2.1",
-        "husky": "^3.0.3"
+        "eslint": "^6.4.0",
+        "husky": "^3.0.5"
     },
     "scripts": {
         "start": "node index.js",
