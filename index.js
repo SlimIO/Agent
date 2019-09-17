@@ -26,7 +26,7 @@ async function main() {
         silent: argv.get("silent"),
         autoReload: argv.get("autoreload")
     })).initialize();
-    const end = (startTime - performance.now()).toFixed(2);
+    const end = (performance.now() - startTime).toFixed(2);
     core.logger.writeLine(`SlimIO Agent started in ${end}ms`);
 
     // Handle exit signal!
