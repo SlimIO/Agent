@@ -65,6 +65,7 @@ jsdoc/
 docs/
 
 agent.json
+agent.toml
 addons/*
 debug/
 daemon/
