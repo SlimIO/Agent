@@ -3,6 +3,7 @@
     "version": "0.1.0",
     "description": "SlimIO Agent",
     "main": "index.js",
+    "type": "module",
     "engines": {
         "node": ">=10"
     },
@@ -26,8 +27,8 @@
         "husky": "^3.0.5"
     },
     "scripts": {
-        "start": "node index.js --autoreload 500",
-        "silent": "node index.js --silent --autoreload 500",
+        "start": "node --experimental-modules index.js --autoreload 500",
+        "silent": "node --experimental-modules index.js --silent --autoreload 500",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "repository": {

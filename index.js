@@ -1,18 +1,22 @@
-"use strict";
-
 process.title = "SlimIO";
 
 // Require Node.js Dependencies
-const { performance } = require("perf_hooks");
+import { performance } from "perf_hooks";
+import { fileURLToPath } from "url";
+import { dirname } from "path";
 
 // Require Third-party Dependencies
-const Core = require("@slimio/core");
-const { parseArg, argDefinition } = require("@slimio/arg-parser");
+import Core from "@slimio/core";
+import ArgParser from "@slimio/arg-parser";
+
+// Node.js CJS constants
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 /** @type {ArgParser.ArgvResult<Agent.Argv>} */
-const argv = parseArg([
-    argDefinition("--silent", "Enable silent mode"),
-    argDefinition("-a --autoreload [number=500]", "Configuration Autoreload delay")
+const argv = ArgParser.parseArg([
+    ArgParser.argDefinition("--silent", "Enable silent mode"),
+    ArgParser.argDefinition("-a --autoreload [number=500]", "Configuration Autoreload delay")
 ]);
 
 /**
