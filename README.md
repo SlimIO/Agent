@@ -12,7 +12,7 @@ Main components of Agent:
 > 👀 Dont hesitate to follow these links to dig deeper.
 
 ## Requirements
-- [Node.js](https://nodejs.org/en/) v10 or higher
+- [Node.js](https://nodejs.org/en/) v12 or higher
 - [Git](https://git-scm.com/)
 
 ## Getting Started
