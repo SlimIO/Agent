@@ -3,4 +3,4 @@ version = "0.1.0"
 type = "Service"
 
 [psp]
-exclude = ["addons", "archives", "debug"]
+exclude = ["addons", "archives", "debug", "build"]

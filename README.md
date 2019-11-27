@@ -1,4 +1,12 @@
 # Agent
+
+![version](https://img.shields.io/badge/dynamic/json.svg?url=https://raw.githubusercontent.com/SlimIO/Agent/master/package.json&query=$.version&label=Version)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/SlimIO/Agent/commit-activity)
+[![mit](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/SlimIO/Agent/blob/master/LICENSE)
+![dep](https://img.shields.io/david/SlimIO/Agent)
+![size](https://img.shields.io/github/languages/code-size/SlimIO/Agent)
+![known vulnerabilities](https://img.shields.io/snyk/vulnerabilities/github/SlimIO/Agent)
+
 An agent is the result of the addition of a [Core](https://github.com/SlimIO/Core) and several [Addons](https://github.com/SlimIO/Addon) called "**built in**". The presence of these addons is often mandatory (Each of them have a key role like managing the local database, managing alerting, metrics etc..). These behaviors are more described in the SlimIO specification if you are interested.
 
 <p align="center">
