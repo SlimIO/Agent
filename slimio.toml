@@ -4,3 +4,4 @@ type = "Service"
 
 [psp]
 exclude = ["addons", "archives", "debug", "build"]
+jsdoc = false
