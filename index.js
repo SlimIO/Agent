@@ -1,3 +1,4 @@
+/* eslint-disable no-loop-func */
 process.title = "SlimIO";
 
 // Require Node.js Dependencies
@@ -20,11 +21,23 @@ const argv = ArgParser.parseArg([
 ]);
 
 /**
+ * @function errorHandler
+ * @param {!Error} error
+ * @returns {void}
+ */
+function errorHandler(error) {
+    console.error(error);
+    process.exit(1);
+}
+
+/**
  * @async
  * @function main
  * @returns {Promise<void>}
  */
 async function main() {
+    let exitTriggered = false;
+
     const startTime = performance.now();
     const [silent = false, autoReload = 500] = [argv.get("silent"), argv.get("autoreload")];
     const core = await (new Core(__dirname, { silent, autoReload })).initialize();
@@ -32,14 +45,15 @@ async function main() {
     core.logger.writeLine(`SlimIO Agent started in ${end}ms`);
 
     // Handle exit signal!
-    process.on("SIGINT", () => {
-        core.logger.writeLine("Exiting SlimIO Agent (please wait)");
-        core.exit().then(() => {
-            setImmediate(process.exit);
-        }).catch(function mainErrorHandler(error) {
-            console.error(error);
-            process.exit(1);
+    for (const signalName of ["SIGINT", "SIGTERM"]) {
+        process.once(signalName, () => {
+            if (exitTriggered) {
+                return;
+            }
+            exitTriggered = true;
+            core.logger.writeLine("Exiting SlimIO Agent (please wait)");
+            core.exit().then(() => setImmediate(process.exit)).catch(errorHandler);
         });
-    });
+    }
 }
 main().catch(console.error);
