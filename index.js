@@ -41,6 +41,7 @@ async function main() {
     const startTime = performance.now();
     const [silent = false, autoReload = 500] = [argv.get("silent"), argv.get("autoreload")];
     const core = await (new Core(__dirname, { silent, autoReload })).initialize();
+
     const end = (performance.now() - startTime).toFixed(2);
     core.logger.writeLine(`SlimIO Agent started in ${end}ms`);
 
