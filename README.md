@@ -16,7 +16,7 @@ An agent is the result of the addition of a [Core](https://github.com/SlimIO/Cor
 </p>
 
 Main components of Agent:
-- [SlimIO Core](https://github.com/SlimIO/Core) (The core itself...).
+- [SlimIO Core](https://github.com/SlimIO/Core) (The most important component which load addons and handle communications between them).
 - [SlimIO Arg-Parser](https://github.com/SlimIO/Arg-parser) (The package we use to parse process.argv).
 
 > 👀 Dont hesitate to follow these links to dig deeper.
@@ -52,9 +52,9 @@ This section describe all important files and directories.
 
 | name | description |
 | --- | --- |
-| 📄 agent.json | local agent configuration. This file is not required to start an agent, it will be dynamically filled the first time! |
+| 📄 agent.(json/toml) | local agent configuration. This file is not required to start an agent, it will be dynamically filled the first time! |
 | 📁 addons | where addons are (and must be) installed. |
-| 📁 debug | where core dump files are generated (**when an critical error occur in the Core**) |
+| 📁 debug | where core dump files are generated (**when a critical error occur**) |
 
 These files and directories are automatically created and managed when they dont exist. So do not bother yourself with that kind of stuff...
 
@@ -70,7 +70,7 @@ $ cd events
 $ npm install --production # dont forgot to install the Node.js dependencies of that addon...
 ```
 
-Get back at the root of the project and edit `agent.json` to add your addon. If there is no configuration yet, think to create the root structure with the `addons` key.
+Get back at the root of the project and edit the agent configuration to add your addon. If there is no configuration yet, think to create the root structure with the `addons` key.
 ```json
 {
     "addons": {
@@ -82,22 +82,28 @@ Get back at the root of the project and edit `agent.json` to add your addon. If 
 }
 ```
 
+or with TOML syntax
+```toml
+[addons.events]
+active = true
+```
+
 Then, (re)start the agent **and events addon will be loaded** ! (Note: the SlimIO CLI have a reload option under configuration command).
 
 ### Agent configuration
-Agent.json contains a list of addons with their settings (These **are not mean to be used for the addon itself**). All parameters will allow the core to known how you want the addon to behave:
+Agent.json (or .toml) contains a list of addons with their settings (These **are not mean to be used for the addon itself**). All parameters will allow the core to known how you want the addon to behave:
 
-- Standalone (will it have a dedicated process or not?)
-- Active (will it be started or not ?).
+- **standalone** (will it have a dedicated process or not?)
+- **active** (will it be started or not ?).
 
-These settings will influence the way to communicate with it inside the core too.
+These settings will influence the way to communicate with it inside the core too. Under the hood the core use the [@slimio/config](https://github.com/SlimIO/Config) package to load and interact with the configuration (this is why both JSON and [TOML](https://github.com/toml-lang/toml) are supported formats).
 
 ## CLI Options
 
-- all commands start with `--`
-- all shorcut start with `-`
+- all commands start with the prefix `--`
+- all shorcut start with the prefix `-`
 ```bash
-node index --silent -a 1000
+$ node index --silent -a 1000
 ```
 
 | name | shorcut | Default | description |
