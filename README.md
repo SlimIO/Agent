@@ -7,7 +7,6 @@
 ![size](https://img.shields.io/github/languages/code-size/SlimIO/Agent)
 ![known vulnerabilities](https://img.shields.io/snyk/vulnerabilities/github/SlimIO/Agent)
 [![Build Status](https://travis-ci.com/SlimIO/Agent.svg?branch=master)](https://travis-ci.com/SlimIO/Agent)
-[![Greenkeeper badge](https://badges.greenkeeper.io/SlimIO/Agent.svg)](https://greenkeeper.io/)
 
 An agent is the result of the addition of a [Core](https://github.com/SlimIO/Core) and several [Addons](https://github.com/SlimIO/Addon) called "**built in**". The presence of these addons is often mandatory (Each of them have a key role like managing the local database, managing alerting, metrics etc..). These behaviors are more described in the SlimIO specification if you are interested.
 
