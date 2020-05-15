@@ -31,15 +31,15 @@
     "devDependencies": {
         "@commitlint/cli": "^8.3.5",
         "@commitlint/config-conventional": "^8.3.4",
-        "@slimio/eslint-config": "^4.0.0",
-        "@slimio/psp": "^0.11.0",
-        "@types/es6-shim": "^0.31.39",
-        "@types/node": "^13.5.0",
+        "@slimio/eslint-config": "^4.1.0",
+        "@slimio/psp": "^0.11.1",
+        "@types/es6-shim": "^0.31.40",
+        "@types/node": "^14.0.1",
         "cross-env": "^7.0.2",
         "dotenv": "^8.2.0",
-        "eslint": "^6.8.0",
-        "husky": "^4.2.3",
-        "jest": "^25.1.0"
+        "eslint": "^7.0.0",
+        "husky": "^4.2.5",
+        "jest": "^26.0.1"
     },
     "scripts": {
         "start": "node --experimental-modules index.js --autoreload 500",
