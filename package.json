@@ -1,68 +1,72 @@
 {
-    "name": "@slimio/agent",
-    "version": "0.1.0",
-    "description": "SlimIO Agent",
-    "main": "index.js",
-    "type": "module",
-    "engines": {
-        "node": ">=12"
-    },
-    "husky": {
-        "hooks": {
-            "pre-push": "cross-env eslint index.js && npm test",
-            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-        }
-    },
-    "jest": {
-        "testEnvironment": "node",
-        "testMatch": [
-            "**/test/**/*.js"
-        ],
-        "testPathIgnorePatterns": [
-            "/node_modules/",
-            "/test/fixtures/",
-            "/addons/"
-        ]
-    },
-    "dependencies": {
-        "@slimio/arg-parser": "^0.3.2",
-        "@slimio/core": "^0.11.0"
-    },
-    "devDependencies": {
-        "@commitlint/cli": "^8.3.5",
-        "@commitlint/config-conventional": "^8.3.4",
-        "@slimio/eslint-config": "^4.1.0",
-        "@slimio/psp": "^0.11.1",
-        "@types/es6-shim": "^0.31.40",
-        "@types/node": "^14.0.1",
-        "cross-env": "^7.0.2",
-        "dotenv": "^8.2.0",
-        "eslint": "^7.0.0",
-        "husky": "^4.2.5",
-        "jest": "^26.0.1"
-    },
-    "scripts": {
-        "start": "node --experimental-modules index.js --autoreload 500",
-        "silent": "node --experimental-modules index.js --silent --autoreload 500",
-        "test": "cross-env psp && jest --coverage"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/SlimIO/Agent.git"
-    },
-    "keywords": [
-        "SlimIO",
-        "Monitoring",
-        "Agent"
+  "name": "@slimio/agent",
+  "version": "0.1.0",
+  "description": "SlimIO Agent",
+  "main": "index.js",
+  "type": "module",
+  "engines": {
+    "node": ">=12"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "cross-env eslint index.js && npm test",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "testMatch": [
+      "**/test/**/*.js"
     ],
-    "files": [
-        "index.js",
-        "index.d.ts"
-    ],
-    "author": "SlimIO",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/SlimIO/Agent/issues"
-    },
-    "homepage": "https://github.com/SlimIO/Agent#readme"
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/test/fixtures/",
+      "/addons/"
+    ]
+  },
+  "dependencies": {
+    "@slimio/arg-parser": "^0.3.2",
+    "@slimio/core": "^0.11.0",
+    "snyk": "^1.323.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "@slimio/eslint-config": "^4.1.0",
+    "@slimio/psp": "^0.11.1",
+    "@types/es6-shim": "^0.31.40",
+    "@types/node": "^14.0.1",
+    "cross-env": "^7.0.2",
+    "dotenv": "^8.2.0",
+    "eslint": "^7.0.0",
+    "husky": "^4.2.5",
+    "jest": "^26.0.1"
+  },
+  "scripts": {
+    "start": "node --experimental-modules index.js --autoreload 500",
+    "silent": "node --experimental-modules index.js --silent --autoreload 500",
+    "test": "cross-env psp && jest --coverage",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SlimIO/Agent.git"
+  },
+  "keywords": [
+    "SlimIO",
+    "Monitoring",
+    "Agent"
+  ],
+  "files": [
+    "index.js",
+    "index.d.ts"
+  ],
+  "author": "SlimIO",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SlimIO/Agent/issues"
+  },
+  "homepage": "https://github.com/SlimIO/Agent#readme",
+  "snyk": true
 }
