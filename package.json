@@ -26,7 +26,8 @@
     },
     "dependencies": {
         "@slimio/arg-parser": "^0.3.2",
-        "@slimio/core": "^0.11.0"
+        "@slimio/core": "^0.11.0",
+        "os-service": "^2.2.0"
     },
     "devDependencies": {
         "@commitlint/cli": "^8.3.5",
